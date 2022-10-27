@@ -24,7 +24,7 @@
       </div>
     </div>
     <div id="runners">
-      <div class="runner">
+      <div class="runner" v-if="runners[0]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense>
           <TextValue one-line :value="runners[0].name" :account="runners[0].currentAccount()"></TextValue>
@@ -33,7 +33,7 @@
           <Split small :id="runners[0].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[1]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[1]">
           <TextValue one-line :value="runners[1].name" :account="runners[1].currentAccount()"></TextValue>
@@ -42,7 +42,7 @@
           <Split small :id="runners[1].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[2]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[2]">
           <TextValue one-line :value="runners[2].name" :account="runners[2].currentAccount()"></TextValue>
@@ -51,7 +51,7 @@
           <Split small :id="runners[2].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[3]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[3]">
           <TextValue one-line :value="runners[3].name" :account="runners[3].currentAccount()"></TextValue>
