@@ -26,6 +26,7 @@ npm run dev
 * `http://localhost:3100/graphics/sd-race-4/`
 * `http://localhost:3100/graphics/gb-solo/`
 * `http://localhost:3100/graphics/gba-solo/`
+* `http://localhost:3100/graphics/3ds/`
 * `http://localhost:3100/graphics/score-attack-2/`
 * `http://localhost:3100/graphics/score-attack-4/`
 

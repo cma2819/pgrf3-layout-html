@@ -1,5 +1,32 @@
 export default [
   {
+    title: 'ゲームタイトル1',
+    category: 'Category1%',
+    platform: 'Platform1',
+    startsAt: '2021/09/04 12:00:00',
+    est: '00:10:00',
+    runners: [
+      {
+        id: "team-id-a",
+        name: '走者A',
+        accounts: {
+          nico: 'co12345678',
+          twitch: '',
+          twitter: 'twitterA',
+          youtube: 'youtubeA'
+        }
+      }
+    ],
+    commentators: [
+      {
+        name: 'コメンテータA',
+        accounts: {
+          twitter: 'comTwitterA'
+        }
+      }
+    ]
+  },
+  {
     title: 'ゲームタイトル2',
     category: 'Category2%',
     platform: 'Platform2',
@@ -18,16 +45,8 @@ export default [
         id: "team-id-b",
         name: '走者C',
         accounts: {
-          twitter: 'twitterC',
-          youtube: 'youtubeC'
-        }
-      },
-      {
-        id: "team-id-c",
-        name: '走者D',
-        accounts: {
-          twitter: 'twitterD',
-          youtube: 'youtubeD'
+          twitch: 'twitchC',
+          twitter: 'twitterC'
         }
       }
     ],
