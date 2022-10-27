@@ -1,4 +1,5 @@
 <template>
+  <WatchReplicant></WatchReplicant>
   <Background></Background>
   <header>
     <Header dense></Header>
@@ -92,6 +93,7 @@ import Split from './components/game/Split.vue'
 import Video from './components/game/Video.vue'
 import Tweet from './components/Tweet.vue'
 import Footer from './components/game/Footer.vue'
+import WatchReplicant from './components/WatchReplicant.vue'
 
 const scale = 0.28
 const width = ref(`${1920 * scale}px`)

@@ -1,4 +1,5 @@
 <template>
+  <WatchReplicant></WatchReplicant>
   <SDRace4>
     <template #split1="{ runnerId }">
       <div class="score">
@@ -28,6 +29,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import SDRace4 from './SDRace4.vue'
 import Counter from './components/game/Counter.vue'
+import WatchReplicant from './components/WatchReplicant.vue'
 
 const store = useStore()
 const scoreOf = computed(() => store.getters.scoreOf)

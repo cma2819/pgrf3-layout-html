@@ -1,4 +1,5 @@
 <template>
+  <WatchReplicant></WatchReplicant>
   <Background></Background>
   <header>
     <Header dense></Header>
@@ -20,7 +21,7 @@
         </InfoBox>
       </div>
     </div>
-    <div id="runners">
+    <div id="runners" v-if="runners[0]">
       <div class="runner">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense>
@@ -34,7 +35,7 @@
           <Split small :id="runners[0].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[1]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[1]">
           <TextValue
@@ -47,7 +48,7 @@
           <Split small :id="runners[1].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[2]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[2]">
           <TextValue
@@ -60,7 +61,7 @@
           <Split small :id="runners[2].id"></Split>
         </slot>
       </div>
-      <div class="runner">
+      <div class="runner" v-if="runners[3]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense v-if="runners[3]">
           <TextValue
@@ -92,6 +93,7 @@ import Split from './components/game/Split.vue'
 import Video from './components/game/Video.vue'
 import Tweet from './components/Tweet.vue'
 import Footer from './components/game/Footer.vue'
+import WatchReplicant from './components/WatchReplicant.vue'
 
 const scale = 0.37
 const width = ref(`${1920 * scale}px`)

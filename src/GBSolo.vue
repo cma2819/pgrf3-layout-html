@@ -1,4 +1,5 @@
 <template>
+  <WatchReplicant></WatchReplicant>
   <Background></Background>
   <header>
     <Header></Header>
@@ -46,6 +47,7 @@ import InfoBox from './components/game/InfoBox.vue'
 import TimeValue from './components/game/TimeValue.vue'
 import Video from './components/game/Video.vue'
 import Footer from './components/game/Footer.vue'
+import WatchReplicant from './components/WatchReplicant.vue'
 
 // 10:9
 const width = ref(`${1600 * 0.64}px`)

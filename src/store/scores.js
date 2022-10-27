@@ -1,7 +1,6 @@
-import testData from './test-data/scores.js'
 export default {
   state: () => ({
-    scores: testData
+    scores: []
   }),
   getters: {
     scoreOf: ({ scores }) => id => {

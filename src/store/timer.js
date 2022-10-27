@@ -1,19 +1,18 @@
-import testData from './test-data/timer.js'
 import { Duration } from 'luxon'
 
 export default {
   state: () => ({
-    time: testData.time,
-    status: testData.status,
-    splits: testData.split
+    time: '',
+    status: '',
+    splits: []
   }),
   getters: {
     formattedTime: ({ time }) => {
       const numbers = time.split(':')
       const duration = Duration.fromObject({
-        hours: parseInt(numbers[0]),
-        minutes: parseInt(numbers[1]),
-        seconds: parseInt(numbers[2])
+        hours: parseInt(numbers[0] || '0'),
+        minutes: parseInt(numbers[1] || '0'),
+        seconds: parseInt(numbers[2] || '0'),
       })
       if (duration.hours > 0) {
         return duration.toFormat('hh:mm:ss')

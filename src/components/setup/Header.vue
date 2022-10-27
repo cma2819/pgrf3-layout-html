@@ -1,9 +1,9 @@
 <template>
-  <img id="logo-ome" src="/assets/pgrf/images/ome_logo.png" alt="OME" />
+  <img id="logo-ome" :src="omeLogo" alt="OME" />
   <span id="presents">presents</span>
   <img
     id="logo-pgrf"
-    src="/assets/pgrf/images/pgrf2_logo_simple.png"
+    :src="pgrfLogo"
     alt="PGRF"
   />
   <div id="now" class="time">{{ formattedTIme }}</div>
@@ -22,10 +22,19 @@ const formattedTIme = computed(() => {
     return t.toFormat('HH mm')
   }
 })
+
+const pgrfLogo = ref('')
+const omeLogo = ref('')
 onMounted(() => {
   setInterval(() => {
     time.value = DateTime.now()
   }, 50)
+  nodecg.Replicant('assets:logo').on('change', (newVal) => {
+    pgrfLogo.value = newVal[0]?.url || ''
+  })
+  nodecg.Replicant('assets:ome-logo').on('change', (newVal) => {
+    omeLogo.value = newVal[0]?.url || ''
+  })
 })
 
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <img id="logo" :class="{ dense }" src="/assets/pgrf/images/pgrf2_logo_simple.png" />
+  <img id="logo" :src="logo" />
   <div id="title" :class="{ dense }">
     <div id="game-title" :class="{ dense }" ref="title">{{ info.title }}</div>
     <p id="category-platform">{{ info.category }} - {{ info.platform }}</p>
@@ -33,7 +33,14 @@ const scaleTitle = () => {
   }
 }
 
-onMounted(scaleTitle)
+const logo = ref('');
+
+onMounted(() => {
+  nodecg.Replicant('assets:logo').on('change', (newVal) => {
+    logo.value = newVal[0]?.url || '';
+  });
+  scaleTitle();
+})
 onUpdated(scaleTitle)
 </script>
 

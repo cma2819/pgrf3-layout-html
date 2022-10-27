@@ -1,11 +1,12 @@
 <template>
+  <WatchReplicant></WatchReplicant>
   <Background></Background>
   <header>
     <Header></Header>
   </header>
   <main>
     <div id="runners">
-      <div class="runner">
+      <div class="runner" v-if="runners[0]">
         <Video :style="{ width, height }"></Video>
         <InfoBox dense label="Runner I">
           <TextValue
@@ -64,6 +65,7 @@ import Split from './components/game/Split.vue'
 import Video from './components/game/Video.vue'
 import Tweet from './components/Tweet.vue'
 import Footer from './components/game/Footer.vue'
+import WatchReplicant from './components/WatchReplicant.vue'
 
 const width = ref(`${1920 * 0.4}px`)
 const height = ref(`${1440 * 0.4}px`)

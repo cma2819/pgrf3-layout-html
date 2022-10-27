@@ -4,8 +4,12 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/bundles/pgrf3-layouts/',
   plugins: [ vue() ],
   build: {
+    emptyOutDir: false,
+    outDir: '../../',
+    assetsDir: './graphics/assets',
     rollupOptions: {
       input: {
         setup: resolve(__dirname, 'graphics/setup/index.html'),
