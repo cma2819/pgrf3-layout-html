@@ -19,6 +19,7 @@ export default defineConfig({
         'hd-race-4': resolve(__dirname, 'graphics/hd-race-4/index.html'),
         'sd-solo': resolve(__dirname, 'graphics/sd-solo/index.html'),
         'sd-race-2': resolve(__dirname, 'graphics/sd-race-2/index.html'),
+        'sd-race-4': resolve(__dirname, 'graphics/sd-race-4/index.html'),
         'gb-solo': resolve(__dirname, 'graphics/gb-solo/index.html'),
         'gba-solo': resolve(__dirname, 'graphics/gba-solo/index.html'),
         'score-attack-2': resolve(__dirname, 'graphics/score-attack-2/index.html'),
