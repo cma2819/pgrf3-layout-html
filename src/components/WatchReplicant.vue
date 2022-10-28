@@ -37,7 +37,7 @@ onMounted(() => {
               startsAt: dtToFormatString(new Date(run.scheduled)),
               est: run.estimate || '',
               runners: run.teams.flatMap(team => team.players.map((player) => {
-                const addition = userAdditions.find(add => add.id === player.customData.oengusId);
+                const addition = userAdditions.find(add => add.id === player.id);
                 return {
                   id: team.id,
                   name: player.name,
